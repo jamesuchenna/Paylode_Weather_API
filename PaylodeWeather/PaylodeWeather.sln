@@ -1,0 +1,43 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.4.33205.214
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PaylodeWeather.API", "PaylodeWeather.API\PaylodeWeather.API.csproj", "{2A9E5C70-99C6-473C-8942-0CFD9CEF865E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PaylodeWeather.Core", "PaylodeWeather.Core\PaylodeWeather.Core.csproj", "{C3EBF9AC-6D31-405B-B331-96FBA5C57EE6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PaylodeWeather.Domain", "PaylodeWeather.Domain\PaylodeWeather.Domain.csproj", "{68B6F82A-9751-4107-9EBF-2883B6185BBC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PaylodeWeather.Infrastructure", "PaylodeWeather.Infrastructure\PaylodeWeather.Infrastructure.csproj", "{95D20578-65C3-4B35-93CC-563B84DDC23F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2A9E5C70-99C6-473C-8942-0CFD9CEF865E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2A9E5C70-99C6-473C-8942-0CFD9CEF865E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2A9E5C70-99C6-473C-8942-0CFD9CEF865E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2A9E5C70-99C6-473C-8942-0CFD9CEF865E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C3EBF9AC-6D31-405B-B331-96FBA5C57EE6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C3EBF9AC-6D31-405B-B331-96FBA5C57EE6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C3EBF9AC-6D31-405B-B331-96FBA5C57EE6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C3EBF9AC-6D31-405B-B331-96FBA5C57EE6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{68B6F82A-9751-4107-9EBF-2883B6185BBC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{68B6F82A-9751-4107-9EBF-2883B6185BBC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{68B6F82A-9751-4107-9EBF-2883B6185BBC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{68B6F82A-9751-4107-9EBF-2883B6185BBC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{95D20578-65C3-4B35-93CC-563B84DDC23F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{95D20578-65C3-4B35-93CC-563B84DDC23F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{95D20578-65C3-4B35-93CC-563B84DDC23F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{95D20578-65C3-4B35-93CC-563B84DDC23F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {2E55B94A-A065-4D6D-89DC-F3E66EC5809E}
+	EndGlobalSection
+EndGlobal
