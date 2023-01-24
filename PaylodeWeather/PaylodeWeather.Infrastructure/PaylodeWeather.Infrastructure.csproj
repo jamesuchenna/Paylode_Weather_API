@@ -6,4 +6,8 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\PaylodeWeather.Core\PaylodeWeather.Core.csproj" />
+  </ItemGroup>
+
 </Project>
