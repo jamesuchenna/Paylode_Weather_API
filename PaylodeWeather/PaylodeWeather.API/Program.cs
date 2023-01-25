@@ -2,6 +2,7 @@ using Microsoft.EntityFrameworkCore;
 using PaylodeWeather.Core.Interfaces;
 using PaylodeWeather.Extensions;
 using PaylodeWeather.Infrastructure;
+using PaylodeWeather.SwaggerConfig;
 using PaylodWeather.Core.Services;
 using WeatherApi.Core.Services;
 using WeatherApi.Core.Utilities;
@@ -26,7 +27,7 @@ builder.Services.AddControllers();
 builder.Services.AddAutoMapper(typeof(AppUserProfiles));
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
-builder.Services.AddSwaggerGen();
+builder.Services.AddSwaggerConfiguration();
 
 var app = builder.Build();
 
@@ -34,7 +35,10 @@ var app = builder.Build();
 if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
-    app.UseSwaggerUI();
+    app.UseSwaggerUI(setupAction =>
+    {
+        setupAction.SwaggerEndpoint("/swagger/WeatherOpenAPI/swagger.json", "Weather API");
+    });
 }
 
 app.UseHttpsRedirection();
