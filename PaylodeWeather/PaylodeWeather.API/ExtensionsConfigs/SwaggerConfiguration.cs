@@ -1,6 +1,6 @@
 ﻿using Microsoft.OpenApi.Models;
 
-namespace PaylodeWeather.SwaggerConfig
+namespace PaylodeWeather.ExtensionsConfigs
 {
     public static class SwaggerConfigurationExtension
     {
