@@ -18,6 +18,7 @@ namespace PaylodeWeather.Extensions
             {
                 v.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
                 v.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
+                v.DefaultScheme = JwtBearerDefaults.AuthenticationScheme;
             })
              .AddJwtBearer(v =>
              {
@@ -32,17 +33,6 @@ namespace PaylodeWeather.Extensions
                      IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(configuration.GetValue<string>("JWTSettings:Key")))
                  };
              });
-
-            services.AddIdentity<AppUser, IdentityRole>(x =>
-            {
-                x.Password.RequiredLength = 8;
-                x.Password.RequireDigit = true;
-                x.Password.RequireUppercase = true;
-                x.Password.RequireLowercase = true;
-                x.User.RequireUniqueEmail = true;
-            })
-                .AddEntityFrameworkStores<AppDbContext>()
-                .AddDefaultTokenProviders();
         }
     }
 }

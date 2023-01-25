@@ -1,5 +1,7 @@
+using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using PaylodeWeather.Core.Interfaces;
+using PaylodeWeather.Domain.Model;
 using PaylodeWeather.Extensions;
 using PaylodeWeather.Infrastructure;
 using PaylodeWeather.SwaggerConfig;
@@ -17,6 +19,18 @@ builder.Services.AddScoped<IAuthService, AuthService>();
 // Configure DbContext
 builder.Services.AddDbContext<AppDbContext>(options => options.
         UseSqlServer(configuration.GetConnectionString("PaylodeWeatherApiDb")));
+
+// Add Identity
+builder.Services.AddIdentity<AppUser, IdentityRole>(x =>
+{
+    x.Password.RequiredLength = 8;
+    x.Password.RequireDigit = true;
+    x.Password.RequireUppercase = true;
+    x.Password.RequireLowercase = true;
+    x.User.RequireUniqueEmail = true;
+})
+   .AddEntityFrameworkStores<AppDbContext>()
+   .AddDefaultTokenProviders();
 
 //Authentication and Authorization configurations
 builder.Services.AddAuthenticationExtension(configuration);
@@ -43,6 +57,7 @@ if (app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 
+app.UseAuthentication();
 app.UseAuthorization();
 
 app.MapControllers();

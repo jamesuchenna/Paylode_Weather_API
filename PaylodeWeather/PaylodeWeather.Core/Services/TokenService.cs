@@ -20,6 +20,11 @@ namespace WeatherApi.Core.Services
             _manager = userManager;
         }
 
+        /// <summary>
+        /// Generates JWT token for a logged in user
+        /// </summary>
+        /// <param name="user"></param>
+        /// <returns> returns JWT token</returns>
         public async Task<string> GenerateToken(AppUser user)
         {
             var authClaims = new List<Claim>
@@ -48,6 +53,10 @@ namespace WeatherApi.Core.Services
             return new JwtSecurityTokenHandler().WriteToken(token);
         }
 
+        /// <summary>
+        /// Generates a JWT refresh token
+        /// </summary>
+        /// <returns> returns a JWT refresh token</returns>
         public string GenerateRefreshToken()
         {
             return Guid.NewGuid().ToString();
