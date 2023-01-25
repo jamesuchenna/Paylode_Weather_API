@@ -4,9 +4,9 @@ using PaylodeWeather.Domain.Model;
 
 namespace WeatherApi.Core.Utilities
 {
-    public class AppUserPofiles : Profile
+    public class AppUserProfiles : Profile
     {
-        public AppUserPofiles()
+        public AppUserProfiles()
         {
             CreateMap<RegistrationDTO, AppUser>()
                  .ForMember(dest => dest.Email, act => act.MapFrom(src => src.Email.ToLower()))
