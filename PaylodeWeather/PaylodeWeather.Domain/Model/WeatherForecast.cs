@@ -1,4 +1,4 @@
-namespace PaylodeWeather.API
+namespace PaylodeWeather.Domain.Model
 {
     public class WeatherForecast
     {

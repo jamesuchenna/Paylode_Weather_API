@@ -1,5 +1,6 @@
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using PaylodeWeather.Domain.Model;
 using ILogger = Serilog.ILogger;
 
 namespace PaylodeWeather.API.Controllers
